@@ -1,0 +1,6 @@
+<h1>Políticos</h1>
+<ul>
+  {% for p in politicos %}
+    <li>{{ p.nome }} ({{ p.partido }}-{{ p.uf }})</li>
+  {% endfor %}
+</ul>
