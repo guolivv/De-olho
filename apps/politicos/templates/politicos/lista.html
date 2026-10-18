@@ -1,6 +1,14 @@
 <h1>Políticos</h1>
+
+<form method="get">
+  <input type="text" name="q" value="{{ termo }}" placeholder="Buscar por nome ou partido">
+  <button type="submit">Buscar</button>
+</form>
+
 <ul>
   {% for p in politicos %}
     <li>{{ p.nome }} ({{ p.partido }}-{{ p.uf }})</li>
+  {% empty %}
+    <li>Nenhum político encontrado</li>
   {% endfor %}
 </ul>
